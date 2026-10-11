@@ -1,0 +1,5 @@
+export const mc = (skill, text, correct, a, b, c, difficulty = 'medium') => ({ skill, topic: skill, type: 'mcq', text, choices: [correct, a, b, c], answerKey: correct, difficulty })
+export const tf = (skill, text, correctTrue, answerKey, difficulty = 'medium') => ({ skill, topic: skill, type: 'true_false', text, correctTrue, answerKey, difficulty })
+export const oral = (skill, text, answerKey, difficulty = 'medium') => ({ skill, topic: skill, type: 'oral', text, answerKey, difficulty })
+export const scenario = (skill, text, answerKey, difficulty = 'medium') => ({ skill, topic: skill, type: 'open', text, answerKey, difficulty })
+export const scale = (trait, text, reverse = false, difficulty = 'medium') => ({ trait, skill: trait, topic: trait, text, reverse, type: 'scale', difficulty })
